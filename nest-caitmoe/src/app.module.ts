@@ -14,6 +14,7 @@ import { ShortUrlsModule } from './modules/shorturl/shorturls.module';
 import { TamagotchiModule } from './modules/tamagotchi/tamagotchi.module';
 import { CamerasModule } from './modules/dgt/cameras/cameras.module';
 import { PhotosModule } from './modules/dgt/photos/photos.module';
+import { wwwModule } from './modules/www/www.module';
 
 
 @Module({
@@ -21,6 +22,7 @@ import { PhotosModule } from './modules/dgt/photos/photos.module';
             UsersModule, SongsModule, UrlsModule, ProjectsModule, CounterModule,
             ShortUrlsModule,
             TamagotchiModule,
+            wwwModule,
             CamerasModule, PhotosModule,
            ],
   controllers: [AppController],
