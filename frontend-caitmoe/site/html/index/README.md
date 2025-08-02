@@ -1,4 +1,4 @@
-## www.cait.moe
+## index.cait.moe
 
 > Simple site listing my links and social media
 
