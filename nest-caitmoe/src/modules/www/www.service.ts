@@ -27,20 +27,24 @@ export class wwwService {
     }) .catch((error) => {
       return JSON.parse(JSON.stringify(error));
     });
+    return JSON.parse(JSON.stringify("error"));
   }
 
-  async getLastFM() {
+  async getLastFM(): Promise<JSON> {
     let config = {
       method: "get",
       url: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=psikooUwU&limit=1&format=json&api_key="+this.configService.get("LASTFM_KEY"),
       headers: { "Content-Type": "application/json" }
     };
+    let finalResponse = "empty";
     await axios.request(config) .then((response) => {
-      console.log(response);
-      return JSON.parse(JSON.stringify(response.data));
-    }) .catch((error) => {
+      console.log(response.data);
+      finalResponse = response.data;
+    }).catch((error) => {
       console.log(error);
-      return JSON.parse(JSON.stringify(error));
+      finalResponse = error;
     });
+    console.log("after req")
+    return JSON.parse(JSON.stringify(finalResponse));
   }
 }
