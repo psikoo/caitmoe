@@ -24,6 +24,13 @@ cd ..
 sudo docker build -t java-caitmoe:1 . >/dev/null
 
 echo "-- Building the frontend --"
+echo "--         Astro         --"
+cd $varRepo/frontend-caitmoe/site/astro/www
+echo "> www"
+sudo npm install >/dev/null
+sudo npm run build >/dev/null
+
+echo "--          Vue          --"
 cd $varRepo/frontend-caitmoe/site/vue/y2k/vue
 echo "> y2k"
 sudo npm install >/dev/null

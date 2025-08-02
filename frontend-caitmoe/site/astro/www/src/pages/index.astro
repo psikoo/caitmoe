@@ -1,0 +1,12 @@
+---
+import PageLayout from '../layouts/page.layout.astro';
+import Body from '../components/body/body.component.astro';
+
+const discordRes = await fetch("https://api.lanyard.rest/v1/users/614870731322425374");
+const discordJson = await discordRes.json();
+const discordData = discordJson.data;
+---
+
+<PageLayout discordData={discordData}>
+	<Body>
+</PageLayout>

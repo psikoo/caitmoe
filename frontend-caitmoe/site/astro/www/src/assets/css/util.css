@@ -1,0 +1,49 @@
+.darkHover:hover {
+  filter: brightness(0.75) !important;
+}
+
+.smallOnClick:active {
+  transform: scale(0.9);
+}
+.bigOnClick:active {
+  transform: scale(1.1);
+}
+
+.noDecoration {
+  text-decoration: none !important;
+}
+
+.noWhiteSpace {
+  display: inline;
+  margin-left: -0.2rem;
+}
+
+.noWarp {
+  text-wrap: nowrap !important;
+}
+
+.notIntractable {
+  user-select: none;
+  pointer-events: none;
+}
+.notSelectable {
+  user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 961px) {
+  .hideOnPc { display: none !important }
+}
+
+@media screen and (max-width: 960px) {
+  .hideOnPc { display: unset !important; }
+  .hideOnTablet { display: none !important; }
+}
+
+@media screen and (max-width: 450px) {
+  .hideOnPc { display: unset !important; }
+  .hideOnPhone { display: none !important; }
+}

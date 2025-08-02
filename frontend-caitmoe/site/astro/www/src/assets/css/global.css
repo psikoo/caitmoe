@@ -1,0 +1,40 @@
+:root {
+  --color-primary: #aa8cd7;
+  --color-background: #1e1e2d;
+  --color-background-light: #322d41;
+  --color-text: #cdd6f5;
+  --color-gradient: #eb8ccb;
+}
+
+::selection {
+  color: var(--color-background);
+  background: var(--color-primary);
+}
+
+@font-face {
+  font-family: atkinson;
+  font-display: block;
+  src: url(../fonts/atkinson.ttf)
+}
+
+h1 {
+  font-size: x-large;
+}
+
+small {
+  font-size: small;
+  opacity: 60%;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+a:hover {
+  text-decoration: underline;
+  filter: brightness(0.75);
+}
+a:active {
+  font-size: 120%;
+  line-height: 1rem;
+}
