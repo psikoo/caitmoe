@@ -16,7 +16,7 @@ let tamagotchi = {
 @Injectable()
 export class wwwService {
   constructor(private readonly configService: ConfigService) {}
-  async getWeather(): Promise<JSON> {
+  async getWeather() {
     let config = {
       method: "get",
       url: "https://api.openweathermap.org/data/2.5/weather?location=Madrid&unit=metric&appid="+this.configService.get("WEATHER_KEY"),
@@ -27,10 +27,9 @@ export class wwwService {
     }) .catch((error) => {
       return JSON.parse(JSON.stringify(error));
     });
-    return JSON.parse(JSON.stringify('"error": "unknown Error'));
   }
 
-  async getLastFM(): Promise<JSON> {
+  async getLastFM() {
     let config = {
       method: "get",
       url: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=psikooUwU&limit=1&format=json&api_key="+this.configService.get("LASTFM_KEY"),
@@ -41,6 +40,5 @@ export class wwwService {
     }) .catch((error) => {
       return JSON.parse(JSON.stringify(error));
     });
-    return JSON.parse(JSON.stringify('"error": "unknown Error'));
   }
 }

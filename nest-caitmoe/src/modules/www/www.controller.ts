@@ -7,11 +7,11 @@ export class wwwController {
     constructor(private readonly wwwService: wwwService) {};
 
     @Get("weather")
-    getWeather(): Promise<JSON> {
+    getWeather() {
         return this.wwwService.getWeather();
     }
     @Get("lastfm")
-    getLastFM(): Promise<JSON> {
+    getLastFM() {
         return this.wwwService.getLastFM();
     }
 }
