@@ -36,8 +36,10 @@ export class wwwService {
       headers: { "Content-Type": "application/json" }
     };
     await axios.request(config) .then((response) => {
+      console.log(response);
       return JSON.parse(JSON.stringify(response.data));
     }) .catch((error) => {
+      console.log(error);
       return JSON.parse(JSON.stringify(error));
     });
   }
