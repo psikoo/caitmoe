@@ -9,7 +9,7 @@ export class wwwService {
     let finalResponse = "empty";
     let config = {
       method: "get",
-      url: "https://api.openweathermap.org/data/2.5/weather?lat=40.41&lon=3.70&units=metric&appid="+this.configService.get("WEATHER_KEY"),
+      url: "https://api.openweathermap.org/data/2.5/weather?lat=-3.705&lon=40.420&units=metric&appid="+this.configService.get("WEATHER_KEY"),
       headers: { "Content-Type": "application/json" }
     };
     await axios.request(config) 
