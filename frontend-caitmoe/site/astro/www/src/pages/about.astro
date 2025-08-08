@@ -1,6 +1,6 @@
 ---
 import PageLayout from '../layouts/page.layout.astro';
-import Body from '../components/index/body.component.astro';
+import Body from '../components/about/body.component.astro';
 
 const discordRes = await fetch("https://api.lanyard.rest/v1/users/614870731322425374");
 const discordJson = await discordRes.json();
@@ -8,5 +8,6 @@ const discordData = discordJson.data;
 ---
 
 <PageLayout discordData={discordData}>
-	<Body>
+	<h1>⚠ Website under construction, for the old one go to <a href="https://index.cait.moe">index.cait.moe</a></h1><br>
+
 </PageLayout>

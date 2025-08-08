@@ -1,0 +1,36 @@
+---
+import "../../../assets/css/util.css"
+const { class: className } = Astro.props
+---
+
+<div class:list={[className, "coolText", "notSelectable"]}>
+  <slot />
+</div>
+
+<style>
+  .coolText {
+    display: inline;
+    text-decoration: underline;
+    cursor: grab;
+    color: var(--color-primary); 
+    background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 0%, var(--color-primary) 100%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    animation: slide 3s ease-in 0s infinite forwards;
+  }
+
+  @keyframes slide {
+    0%   { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 0%, var(--color-primary) 100%); }
+    10%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 20%, var(--color-primary) 100%); }
+    20%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 40%, var(--color-primary) 100%); }
+    30%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 60%, var(--color-primary) 100%); }
+    40%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 80%, var(--color-primary) 100%); }
+    50%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 100%, var(--color-primary) 100%); }
+    60%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 80%, var(--color-primary) 100%); }
+    70%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 60%, var(--color-primary) 100%); }
+    80%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 40%, var(--color-primary) 100%); }
+    90%  { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 20%, var(--color-primary) 100%); }
+    100% { background-image: linear-gradient(90deg, var(--color-primary) 0%, var(--color-gradient) 0%, var(--color-primary) 100%); }
+  }
+</style>

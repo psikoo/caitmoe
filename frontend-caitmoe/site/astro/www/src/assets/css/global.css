@@ -38,3 +38,14 @@ a:active {
   font-size: 120%;
   line-height: 1rem;
 }
+
+ul {
+  list-style-type: none;
+  margin-left: 2rem;
+}
+
+ul > li:before {
+  content: "\2B9E";
+  float: left;
+  margin-left: -20px
+}

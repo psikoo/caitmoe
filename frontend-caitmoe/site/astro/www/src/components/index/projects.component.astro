@@ -1,0 +1,41 @@
+---
+import "../../assets/css/util.css"
+
+import CoolText from "../global/other/coolText.component.astro";
+---
+
+<h1>My <CoolText>Projects</CoolText><div class="noWhiteSpace">:</div></h1>
+<div class="projects">
+	<ul>
+		<li>
+			<a href="https://github.com/psikoo/DGTcameradownloader" target="_blank">DGT camera downloader</a>: 
+			Java app to download images from cameras owned by the DGT.
+		</li>
+		<li>
+			<a href="https://github.com/psikoo/EAN-13_generator" target="_blank">EAN-13_generator</a>: 
+			Tool used to generate EAN-13 barcodes. 
+		</li>
+		<li>
+			<a href="https://github.com/psikoo/AlgorithmicArtistry" target="_blank">Algorithmic Artistry</a>: 
+			Short text based RPG with a very shallow story.
+		</li>
+		<li>
+			<a href="https://github.com/psikoo/publicIpBot" target="_blank">Public Ip Bot</a>: 
+			Discord bot that fetches the public ip of the server its running in.
+		</li>
+		<li>
+			I have a lot more projects and you can check them out here: <a href="https://www.cait.moe/projects" target="_blank">/projects</a>.
+		</li>
+	</ul>
+</div>
+
+<style>
+	a:active {
+		font-size: 100%;
+		line-height: 1rem;
+	}
+	.projects {
+		font-size: large;
+		line-height: 1.5rem;
+	}
+</style>

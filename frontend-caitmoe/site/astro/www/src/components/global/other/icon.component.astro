@@ -1,0 +1,29 @@
+---
+const { class: className, href, isBig } = Astro.props
+---
+
+
+<div class:list={[className]}>
+  <a href={href} draggable="false" target="_blank" class="icon">
+    <div class:list={[{ bigIcon: isBig }, { smallIcon: !isBig }]}>
+      <slot name="icon" />
+    </div>
+    <slot name="text" />
+  </a>
+</div>
+
+<style>
+  .icon{
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    cursor: pointer;
+		filter: brightness(0) saturate(100%) invert(74%) sepia(76%) saturate(2152%) hue-rotate(206deg) brightness(89%) contrast(89%);
+	}
+  .icon:hover {
+    scale: 1.05;
+  }
+
+  .bigIcon { width: 1.5rem; display: block; }
+  .smallIcon { width: 1rem; height: 1rem; display: block; }
+</style>

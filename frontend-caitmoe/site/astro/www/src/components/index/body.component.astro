@@ -1,0 +1,49 @@
+---
+import "../../assets/css/util.css"
+
+import CoolText from "../global/other/coolText.component.astro";
+import About from "./about.component.astro";
+import Projects from "./projects.component.astro";
+import Websites from "./websites.component.astro";
+import Time from "./time.component.vue";
+import Weather from "./weather.component.vue";
+import Lastfm from "./lastfm.component.vue";
+---
+
+<header>
+	<main>
+		<h1>Hii <CoolText>everypony</CoolText><div class="noWhiteSpace">!</div></h1>
+		<About />
+		<div class="info">
+			<Time client:load/>
+			<Weather client:load/>
+		</div>
+		<Lastfm client:load/>
+		<Projects />
+		<Websites />
+		<div class="footerSpacer"></div>
+	</main>
+</header>
+
+<style>
+	a:active {
+		font-size: 100%;
+		line-height: 1rem;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.info {
+		display: flex;
+		gap: 1rem;
+		justify-content: space-around;
+	}
+
+	.footerSpacer {
+		height: 110px;
+	}
+</style>

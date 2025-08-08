@@ -1,0 +1,35 @@
+---
+import "../../assets/css/global.css"
+
+import CoolText from "../global/other/coolText.component.astro";
+---
+
+<header>
+	<main>
+		<h1>My <CoolText>Projects</CoolText><div class="noWhiteSpace">:</div></h1>
+		<div class="footerSpacer"></div>
+	</main>
+</header>
+
+<style>
+	a:active {
+		font-size: 100%;
+		line-height: 1rem;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.info {
+		display: flex;
+		gap: 1rem;
+		justify-content: space-around;
+	}
+
+	.footerSpacer {
+		height: 110px;
+	}
+</style>
