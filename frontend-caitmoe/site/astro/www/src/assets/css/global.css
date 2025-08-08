@@ -40,12 +40,14 @@ a:active {
 }
 
 ul {
-  list-style-type: none;
   margin-left: 2rem;
 }
 
 ul > li:before {
-  content: "\2B9E";
+  content: url("../svg/arrow.svg");
+  height: 1rem;
+  width: 1rem;
+  filter: brightness(0) saturate(100%) invert(74%) sepia(76%) saturate(2152%) hue-rotate(206deg) brightness(89%) contrast(89%);
   float: left;
   margin-left: -20px
 }
