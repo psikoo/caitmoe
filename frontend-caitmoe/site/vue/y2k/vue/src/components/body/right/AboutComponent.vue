@@ -7,9 +7,9 @@
         "Accept": "*/*",
         "Access-Control-Allow-Origin": "*"
       }
-      const res = await fetch(url, { 
+      const res = await fetch(url, {
         method: "GET",
-        headers: headersList 
+        headers: headersList
       });
       const data = await res.json();
       user.value = data;
@@ -17,7 +17,7 @@
       console.log(e);
     }
   }
-  getURL("https://cait.moe:3000/api/y2k/users/1");
+  getURL("https://cait.moe:8443/api/y2k/users/1");
   // stamps
   const base: string = "/out/img/stamps/"; // Compiler fucks the relative rout
   const stamps: any =  ['CatFeet.gif','Cats.gif','ComputerLove.webp','Discord.gif','EyesLove.webp','FrogLove.gif',
@@ -38,7 +38,7 @@
   <div class="main">
     <div v-if="typeof user == 'string'">Loading...</div>
     <div v-else>
-      <h1 class="intro">About Me!</h1> 
+      <h1 class="intro">About Me!</h1>
       <h1 class="introText">{{ user.intro }}</h1>
       <div class="stamps">
         <img v-for="(stamp, index)  in stamps" :src="base+stamp" alt="stamp" class="stamp"/>

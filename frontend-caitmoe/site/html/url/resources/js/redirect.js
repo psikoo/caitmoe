@@ -35,7 +35,7 @@ async function get(id) {
   let headersList = {
     "Accept": "*/*"
   }
-  let response = await fetch("https://cait.moe:3000/api/shorturl/urls/"+id, { 
+  let response = await fetch("https://cait.moe:8443/api/shorturl/urls/"+id, { 
     method: "GET",
     headers: headersList
   });
@@ -48,7 +48,7 @@ async function getAll() {
   let headersList = {
     "Accept": "*/*"
   }
-  let response = await fetch("https://cait.moe:3000/api/shorturl/urls", { 
+  let response = await fetch("https://cait.moe:8443/api/shorturl/urls", { 
     method: "GET",
     headers: headersList
   });

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 #* Get cameraId
-curl -s -k --location 'https://nest-caitmoe:3000/api/dgt/cameras' > ./request/cams.json
+curl -s -k --location 'https://nest-caitmoe:8443/api/dgt/cameras' > ./request/cams.json

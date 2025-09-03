@@ -7,9 +7,9 @@
         "Accept": "*/*",
         "Access-Control-Allow-Origin": "*"
       }
-      const res = await fetch(url, { 
+      const res = await fetch(url, {
         method: "GET",
-        headers: headersList 
+        headers: headersList
       });
       const data = await res.json();
       shuffle(data);
@@ -18,7 +18,7 @@
       console.log(e);
     }
   }
-  getURL("https://cait.moe:3000/api/y2k/songs/");
+  getURL("https://cait.moe:8443/api/y2k/songs/");
   function shuffle(array: any) {
     let currentIndex = array.length;
     while (currentIndex != 0) {
@@ -124,4 +124,4 @@
   #vinyl-gallery .vinyl:nth-child(n):hover .title {
     visibility: visible;
   }
-</style>  
+</style>

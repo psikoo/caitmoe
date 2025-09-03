@@ -11,9 +11,9 @@
         "Accept": "*/*",
         "Access-Control-Allow-Origin": "*"
       }
-      const res = await fetch(url, { 
+      const res = await fetch(url, {
         method: "GET",
-        headers: headersList 
+        headers: headersList
       });
       const data = await res.json();
       links.value = data;
@@ -23,7 +23,7 @@
       console.log(e);
     }
   }
-  getURL("https://cait.moe:3000/api/y2k/urls/");
+  getURL("https://cait.moe:8443/api/y2k/urls/");
 
   async function getOrderedLinks() {
     let unorderedLinksStatic: any = [];
@@ -34,7 +34,7 @@
           if(links.value[i].tag == tags.value[j]) newTag = false;
         }
         if(newTag) tags.value.push(links.value[i].tag);
-        
+
     }
     for(let i=0; i<tags.value.length; i++) {
       for(let j=0; j<links.value.length; j++) {
@@ -44,11 +44,11 @@
           for(let k=0; k<unorderedLinksStatic.length; k++) {
             // console.log(`> ${tags.value[i]} - ${unorderedLinksStatic[k][0]}`)
             if(tags.value[i] == unorderedLinksStatic[k][0]) {
-              unorderedLinksStatic[k][1].push(links.value[j]); 
+              unorderedLinksStatic[k][1].push(links.value[j]);
               foundTag = true;
-            } 
+            }
           }
-          if(!foundTag) unorderedLinksStatic.push([tags.value[i], [links.value[j]]]); 
+          if(!foundTag) unorderedLinksStatic.push([tags.value[i], [links.value[j]]]);
         }
       }
     }
@@ -66,7 +66,7 @@
     // orderedLinksStatic = unorderedLinksStatic;
     orderedLinks.value = orderedLinksStatic;
 
-    
+
   }
 </script>
 
@@ -94,7 +94,7 @@
     background-color: var(--bg-color);
     border: 6px double var(--border-color);
   }
-  
+
   .top {
     text-align: center;
   }

@@ -7,9 +7,9 @@
         "Accept": "*/*",
         "Access-Control-Allow-Origin": "*"
       }
-      const res = await fetch(url, { 
+      const res = await fetch(url, {
         method: "GET",
-        headers: headersList 
+        headers: headersList
       });
       const data = await res.json();
       projects.value = data;
@@ -17,7 +17,7 @@
       console.log(e);
     }
   }
-  getURL("https://cait.moe:3000/api/y2k/projects/");
+  getURL("https://cait.moe:8443/api/y2k/projects/");
 </script>
 
 <template>
@@ -101,4 +101,4 @@
     vertical-align: middle;
     height: 1vw;
   }
-</style>  
+</style>

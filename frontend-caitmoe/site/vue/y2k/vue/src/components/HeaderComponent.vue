@@ -9,9 +9,9 @@
         "Accept": "*/*",
         "Access-Control-Allow-Origin": "*"
       }
-      const res = await fetch(url, { 
+      const res = await fetch(url, {
         method: "GET",
-        headers: headersList 
+        headers: headersList
       });
       const data = await res.json();
       counter.value = data;
@@ -19,7 +19,7 @@
       console.log(e);
     }
   }
-  getURL("https://cait.moe:3000/api/y2k/counter");
+  getURL("https://cait.moe:8443/api/y2k/counter");
 </script>
 
 <template>
@@ -112,5 +112,5 @@
     background-color: var(--hover-color);
     border-radius: 15%;
     text-decoration: underline;
-  }  
+  }
 </style>
