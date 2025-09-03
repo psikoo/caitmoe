@@ -34,11 +34,11 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 961px) {
+@media screen and (min-width: 1301px) {
   .hideOnPc { display: none !important }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1300px) {
   .hideOnPc { display: unset !important; }
   .hideOnTablet { display: none !important; }
 }
