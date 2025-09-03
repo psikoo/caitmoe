@@ -17,6 +17,16 @@
   src: url(../fonts/atkinson.ttf)
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-background-light) !important;
+}
+@media screen and (max-width: 450px) {
+  html {
+    scrollbar-color: var(--color-primary) var(--color-background) !important;
+  }
+}
+
 h1 {
   font-size: x-large;
 }
