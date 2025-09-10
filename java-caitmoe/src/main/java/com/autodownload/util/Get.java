@@ -10,6 +10,7 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Properties;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,7 +31,8 @@ public class Get {
 
   // Fetch json object
   public static JsonNode getJsonFromURL(String uriString) throws URISyntaxException, IOException {
-    String[] command = {"./request/get.sh"};
+    var props = new Properties();
+    String[] command = {"./request/get.sh", (String) props.get("API")};
     Command.instance().executeCommand(command);
     URL url = new File("./request/cams.json").toURI().toURL();
     ObjectMapper mapper = new ObjectMapper();

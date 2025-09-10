@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#TODO make work in docker and make api url change if in docker with props in java (maybe move to other place and add copy in dockerfile)
 imagePath=$1
 cameraName=$2
 api=$3
