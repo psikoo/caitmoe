@@ -32,6 +32,8 @@ public class Get {
   // Fetch json object
   public static JsonNode getJsonFromURL(String uriString) throws URISyntaxException, IOException {
     var props = new Properties();
+    try (var inputStream = Files.newInputStream(Paths.get(".env"))) { props.load(inputStream); } 
+    catch (IOException logError) { Logger.instance().log("Opening", ".env", Logger.Verbosity.LOW, Logger.LogType.ERROR); }
     String api = (String) props.get("API");
     System.out.println("API !!!!!!!!!!!!");
     System.out.println(api);
