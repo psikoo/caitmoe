@@ -54,7 +54,7 @@ export async function patch(id, oldUrl, newUrl) {
   }
   let body = {
     "oldUrl": oldUrl,
-    "newUrl": newUrl
+    "newUrl": "https://url.cait.moe/?u="+newUrl
   }
   let response = await fetch(baseURL+"/"+id, { 
     method: "PATCH",
