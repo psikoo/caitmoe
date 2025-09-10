@@ -35,7 +35,7 @@
       console.log(e);
     }
   }
-  await getURL("https://cait.moe:8443/api/www/weather");
+  await getURL("https://www.cait.moe:8443/api/www/weather");
 </script>
 
 <template>

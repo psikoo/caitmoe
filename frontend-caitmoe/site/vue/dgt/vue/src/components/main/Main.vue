@@ -31,7 +31,7 @@ async function getCamera(url: string) {
     console.log(e);
   }
   // Fetch photos for the camera
-  await getPhotos("https://cait.moe:8443/api/dgt/photos/camera/"+camera.value.id);
+  await getPhotos("https://www.cait.moe:8443/api/dgt/photos/camera/"+camera.value.id);
 }
 // Get photos from the camera
 const photos: Ref<Photo[]> = ref([{} as Photo]);
@@ -103,7 +103,7 @@ onMounted(() => {
 
 watchEffect(() => {
   // Get camera from name
-  if(props.cameraId != 0 && props.cameraId != parseInt(camera.value.name)) getCamera("https://cait.moe:8443/api/dgt/cameras/name/"+props.cameraId);
+  if(props.cameraId != 0 && props.cameraId != parseInt(camera.value.name)) getCamera("https://www.cait.moe:8443/api/dgt/cameras/name/"+props.cameraId);
   // Set feature photo to cameraUrl
   photoUrl.value = cameraUrl.value;
   // Reset photoArrayPos when changing camera
