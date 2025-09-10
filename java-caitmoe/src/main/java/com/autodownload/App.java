@@ -36,6 +36,8 @@ public class App {
     try (var inputStream = Files.newInputStream(Paths.get(".env"))) { props.load(inputStream); } 
     catch (IOException ignore) { Logger.instance().log("Opening", ".env", Logger.Verbosity.LOW, Logger.LogType.ERROR); }
     App.uriString = (String) props.get("API")+"/cameras/";
+    System.out.println("hmmm !!!!!!!!!!!!");
+    System.out.println((String) props.get("API"));
     // Setup ApiDownloader > It automatically updates CAMERAS
     startApiExecutor(uriString);
     ApiDownloader.setup(uriString);
