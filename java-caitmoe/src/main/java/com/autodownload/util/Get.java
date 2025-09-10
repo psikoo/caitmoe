@@ -35,13 +35,8 @@ public class Get {
     var props = new Properties();
     try (var inputStream = Files.newInputStream(Paths.get(".env"))) { props.load(inputStream); } 
     catch (IOException logError) { Logger.instance().log("Opening", ".env", Logger.Verbosity.LOW, Logger.LogType.ERROR); }
-    String api = (String) props.get("API");
-    System.out.println("API !!!!!!!!!!!!");
-    System.out.println(api);
-    String[] command = {"./request/get.sh", String.valueOf(api)};
+    String[] command = {"./request/get.sh", (String) props.get("API")};
     //Remove
-    System.out.println("Command !!!!!!!!!!!!");
-    System.out.println(command[1]);
     Command.instance().executeCommand(command);
     URL url = new File("./request/cams.json").toURI().toURL();
     ObjectMapper mapper = new ObjectMapper();
