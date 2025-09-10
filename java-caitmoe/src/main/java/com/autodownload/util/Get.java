@@ -15,6 +15,7 @@ import java.util.Properties;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import com.autodownload.util.logging.Logger;
 
 public class Get {
   // Fetch an image from the given url and downloads it to the given path
