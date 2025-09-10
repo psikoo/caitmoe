@@ -33,6 +33,8 @@ public class Get {
   public static JsonNode getJsonFromURL(String uriString) throws URISyntaxException, IOException {
     var props = new Properties();
     String api = (String) props.get("API");
+    System.out.println("API !!!!!!!!!!!!");
+    System.out.println(api);
     String[] command = {"./request/get.sh", String.valueOf(api)};
     //Remove
     System.out.println("Command !!!!!!!!!!!!");
