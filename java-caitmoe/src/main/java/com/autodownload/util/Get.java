@@ -32,7 +32,8 @@ public class Get {
   // Fetch json object
   public static JsonNode getJsonFromURL(String uriString) throws URISyntaxException, IOException {
     var props = new Properties();
-    String[] command = {"./request/get.sh", (String) props.get("API")};
+    String api = (String) props.get("API");
+    String[] command = {"./request/get.sh", String.valueOf(api)};
     Command.instance().executeCommand(command);
     URL url = new File("./request/cams.json").toURI().toURL();
     ObjectMapper mapper = new ObjectMapper();
