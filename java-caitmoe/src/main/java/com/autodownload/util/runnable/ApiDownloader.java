@@ -47,6 +47,9 @@ public class ApiDownloader implements Runnable {
     try {
       // Download full camera list
       JsonNode fullJson = Get.getJsonFromURL(uriString);
+      //Remove
+      System.out.println("JSON setup !!!!!!!!!!!!");
+      System.out.println(fullJson);
       // Loop json looking for items to add to the watchlist
       Iterator<JsonNode> jsonIterator = fullJson.elements();
       while(jsonIterator.hasNext()) {

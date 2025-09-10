@@ -34,6 +34,9 @@ public class Get {
     var props = new Properties();
     String api = (String) props.get("API");
     String[] command = {"./request/get.sh", String.valueOf(api)};
+    //Remove
+    System.out.println("Command !!!!!!!!!!!!");
+    System.out.println(command);
     Command.instance().executeCommand(command);
     URL url = new File("./request/cams.json").toURI().toURL();
     ObjectMapper mapper = new ObjectMapper();
