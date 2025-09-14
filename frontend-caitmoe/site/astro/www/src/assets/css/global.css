@@ -9,6 +9,9 @@
 ::selection {
   color: var(--color-background);
   background: var(--color-primary);
+  background-clip: unset; 
+  -webkit-background-clip: unset; 
+  -webkit-text-fill-color:  var(--color-background); 
 }
 
 @font-face {
