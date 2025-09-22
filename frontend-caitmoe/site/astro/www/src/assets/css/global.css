@@ -22,6 +22,7 @@
 
 html {
   background: var(--color-background);
+  background: linear-gradient(90deg, var(--color-background-light) 0%, var(--color-background) 15%, var(--color-background) 85%, var(--color-background-light) 100%);
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-background-light) !important;
 }
