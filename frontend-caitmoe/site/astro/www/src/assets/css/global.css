@@ -21,6 +21,7 @@
 }
 
 html {
+  background: var(--color-background);
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-background-light) !important;
 }
