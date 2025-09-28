@@ -2,15 +2,15 @@ export async function processCommand(command) {
     command = command.split(" ");
     //Game
     if(command[0] == "play" || command[0] == "p") {
-        let res = await getURL("https://www.cait.moe:8443/api/tamagotchi/play");
+        let res = await getURL("https://api.cait.moe/api/tamagotchi/play");
         clearOld();
         addToOld(command[0], await calculateTamagotchiString(JSON.parse(res).message));}
     else if(command[0] == "feed" || command[0] == "f") {
-        let res = await getURL("https://www.cait.moe:8443/api/tamagotchi/feed");
+        let res = await getURL("https://api.cait.moe/api/tamagotchi/feed");
         clearOld();
         addToOld(command[0], await calculateTamagotchiString(JSON.parse(res).message));}
     else if(command[0] == "rest" || command[0] == "s") {
-        let res = await getURL("https://www.cait.moe:8443/api/tamagotchi/rest");
+        let res = await getURL("https://api.cait.moe/api/tamagotchi/rest");
         clearOld();
         addToOld(command[0], await calculateTamagotchiString(JSON.parse(res).message));}
     //Utils
@@ -21,7 +21,7 @@ export async function processCommand(command) {
         if(window.location.hostname == "psikoo.github.io") { pages = "/website/"; }
         window.location.href = window.location.protocol + "//" + window.location.hostname + pages; }
     else if(command[0] == "tamagotchi" || command[0] == "reload" || command[0] == "r") {
-        await getURL("https://www.cait.moe:8443/api/tamagotchi/reload");
+        await getURL("https://api.cait.moe/api/tamagotchi/reload");
         clearOld();
         addToOld(command[0], await calculateTamagotchiString("Reloaded Tamagotchi"));}
     //Github
@@ -30,7 +30,7 @@ export async function processCommand(command) {
         addToOld(command[0], repoString);}
     //Admin
     else if(command[0] == "add" && command[1] == "new") {
-        await getURL("https://www.cait.moe:8443/api/tamagotchi/new");
+        await getURL("https://api.cait.moe/api/tamagotchi/new");
         clearOld();
         addToOld("tamagotchi", await calculateTamagotchiString());}
     //Unknown
@@ -87,7 +87,7 @@ function numToBar(num) {
 }
 
 async function getTamagotchi(res) {
-    let data = JSON.parse(await getURL("https://www.cait.moe:8443/api/tamagotchi/tamagotchi"));
+    let data = JSON.parse(await getURL("https://api.cait.moe/api/tamagotchi/tamagotchi"));
     let age;
     let info = "";
     if(data.state == "Dead") {

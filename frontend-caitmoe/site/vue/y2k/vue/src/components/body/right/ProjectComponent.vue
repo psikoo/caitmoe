@@ -17,7 +17,7 @@
       console.log(e);
     }
   }
-  getURL("https://www.cait.moe:8443/api/y2k/projects/");
+  getURL("https://api.cait.moe/api/y2k/projects/");
 </script>
 
 <template>

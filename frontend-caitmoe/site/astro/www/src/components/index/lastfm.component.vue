@@ -38,7 +38,7 @@
 	
 	watchEffect(() => {
 		// Force update cover
-		if(cover.value == "Loading") getURL("https://www.cait.moe:8443/api/www/lastfm");
+		if(cover.value == "Loading") getURL("https://api.cait.moe/api/www/lastfm");
 		cover.value = cover.value;
 	})
 </script>
